@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HMG Homes - Account</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="form-bg">
+            <div class="form-container px">
+                <form
+                    id="signupForm"
+                    class="d-flex justify-content-between flex-wrap"
+                    autocomplete="off"
+                >
+                    <span class="form-title text-center w-100">
+                        <h1 class="mb-4 logo">
+                            <a class="navbar-brand" href="index.html">
+                                <img
+                                    src="img/logo.png"
+                                    class="site-logo"
+                                    alt=""
+                                />
+                            </a>
+                        </h1>
+
+                        Sign up and get Started!
+                    </span>
+
+                    <div class="input-wrapper">
+                        <input
+                            class="input100"
+                            type="text"
+                            placeholder="Name"
+                            name="name"
+                            data-parsley-required-message="Please enter your name"
+                            required
+                        />
+
+                        <span class="focus-input100"></span>
+
+                        <span class="symbol-input100">
+                            <span class="fa fa-user"></span>
+                        </span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input
+                            class="input100"
+                            type="text"
+                            placeholder="Email address"
+                            name="email"
+                            data-parsley-required-message="Please enter your email address"
+                            data-parsley-pattern="/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/"
+                            data-parsley-pattern-message="Please enter a valid email address"
+                            required
+                        />
+
+                        <span class="focus-input100"></span>
+
+                        <span class="symbol-input100">
+                            <span class="fa fa-envelope"></span>
+                        </span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input
+                            class="input100"
+                            type="text"
+                            placeholder="Phone number"
+                            name="phone"
+                            data-parsley-required-message="Please enter your phone number"
+                            data-parsley-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/"
+                            data-parsley-pattern-message="Please enter a valid phone number"
+                            required
+                        />
+
+                        <span class="focus-input100"></span>
+
+                        <span class="symbol-input100">
+                            <span class="fa fa-phone"></span>
+                        </span>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input
+                            class="input100"
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            data-parsley-required-message="Please enter your password"
+                            required
+                        />
+
+                        <span class="focus-input100"></span>
+
+                        <span class="symbol-input100">
+                            <span class="fa fa-lock"></span>
+                        </span>
+                    </div>
+
+                    <div class="container-form-btn">
+                        <button class="form-btn">Sign up</button>
+                    </div>
+
+                    <div class="text-center w-100" style="padding-top: 30px">
+                        <span class="txt"> Already have an account? </span>
+
+                        <a class="btn btn-outline-hmg ml-2" href="login.html">
+                            Log in
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/parsley.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#signupForm").parsley();
+            });
+        </script>
+    </body>
+</html>

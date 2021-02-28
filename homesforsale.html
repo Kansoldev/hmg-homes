@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HMG Homes - Homes for sale</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-select.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" href="css/elegant-icons.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/test.css" />
+    </head>
+
+    <body>
+        <!-- Header Area -->
+        <header id="site-header" class="fixed-top">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg stroke px-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            src="img/logo-white.png"
+                            class="site-logo"
+                            alt=""
+                        />
+                    </a>
+
+                    <div class="header-relative order-md-3 d-block d-md-none">
+                        <div class="user-menu">
+                            <div class="user-name">
+                                <span>
+                                    <i class="fa fa-user-circle-o"></i>
+                                </span>
+
+                                <div class="user-name-title">Hi, user!</div>
+                            </div>
+
+                            <ul>
+                                <li>
+                                    <a href="login.html">Log in</a>
+                                </li>
+
+                                <li>
+                                    <a href="signup.html">Sign up</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button
+                        class="navbar-toggler collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarTogglerDemo02"
+                        aria-controls="navbarTogglerDemo02"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span
+                            class="navbar-toggler-icon fa icon-expand fa-bars"
+                        ></span>
+                        <span
+                            class="navbar-toggler-icon fa icon-close fa-times"
+                        ></span>
+                    </button>
+
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarTogglerDemo02"
+                    >
+                        <ul class="navbar-nav mx-lg-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="properties.html"
+                                    >Properties</a
+                                >
+                            </li>
+
+                            <div class="dropdown-container">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Buy</a>
+                                </li>
+
+                                <div class="dropdown-content">
+                                    <div class="dropdown-content-item">
+                                        <h4>Homes for Sale</h4>
+
+                                        <a href="#">Homes for Sale</a>
+                                        <a href="#">New Home Construction</a>
+                                        <a href="#">Work with your budget</a>
+                                    </div>
+
+                                    <div class="dropdown-content-item">
+                                        <h4>Homes Values</h4>
+
+                                        <a href="#">Housing Market</a>
+                                        <a href="#">Property Records</a>
+                                        <a href="#">Home Buying Tips</a>
+                                        <a href="#">Home Selling Tips</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sell</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Rent/Lease</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"
+                                    >Luxury Apartments</a
+                                >
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="myhome.html"
+                                    >My Home</a
+                                >
+                            </li>
+                        </ul>
+
+                        <div class="mt-3 mt-md-0 d-none d-md-block">
+                            <a href="login.html" class="btn btn-login">
+                                Login
+                            </a>
+
+                            <a href="signup.html" class="btn btn-signup">
+                                Signup
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header Area -->
+
+        <!-- Hero Area -->
+        <section class="hero-area">
+            <div class="hero-content">
+                <h1 class="text-white hero-title mb-4 mb-md-0">
+                    Discover your perfect home
+                </h1>
+
+                <span
+                    class="text-white my-3 d-none d-md-block"
+                    style="font-size: 1.3em; font-weight: 300; opacity: 0.95"
+                >
+                    With the most complete source of homes for sale & real
+                    estate near you
+                </span>
+
+                <nav class="home-nav">
+                    <ul class="home-nav-list">
+                        <li class="home-nav-item">
+                            <a class="home-nav-link active" href="#">BUY</a>
+                        </li>
+
+                        <li class="home-nav-item">
+                            <a class="home-nav-link" href="rentals.html"
+                                >RENT/LEASE</a
+                            >
+                        </li>
+
+                        <li class="home-nav-item">
+                            <a class="home-nav-link" href="pre-approval.html"
+                                >PRE-APPROVAL</a
+                            >
+                        </li>
+
+                        <li class="home-nav-item">
+                            <a class="home-nav-link" href="just-sold.html"
+                                >JUST SOLD</a
+                            >
+                        </li>
+
+                        <li class="home-nav-item">
+                            <a class="home-nav-link" href="#">HOME VALUE</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <form
+                    id="propertyForm"
+                    class="property-form"
+                    action="search.html"
+                >
+                    <span class="input-group-btn">
+                        <select
+                            name="type"
+                            oninvalid="this.setCustomValidity('Please select a property')"
+                            oninput="this.setCustomValidity('')"
+                            required
+                        >
+                            <option value="">Select Property Type</option>
+                            <option value="apartment">Apartments</option>
+                            <option value="guest house">Houses</option>
+                            <option value="hotel">Hotels</option>
+                            <option value="land">Lands</option>
+                            <option value="resort">Resorts</option>
+                            <option value="villa">Villas</option>
+                        </select>
+                    </span>
+
+                    <span class="input-group-btn my-4 my-md-0 mx-0 mx-md-4">
+                        <select
+                            name="country"
+                            oninvalid="this.setCustomValidity('Please select a country')"
+                            oninput="this.setCustomValidity('')"
+                            required
+                        >
+                            <option value="">Select Country</option>
+                            <option value="ireland">Ireland</option>
+                            <option value="kenya">Kenya</option>
+                            <option value="nigeria">Nigeria</option>
+                            <option value="norway">Norway</option>
+                            <option value="south africa">South Africa</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="usa">United States</option>
+                        </select>
+                    </span>
+
+                    <button type="submit" id="submit" class="btn btn-search">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- End Hero Area -->
+
+        <!-- Newest Listings -->
+        <section class="property-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mt-5">
+                        <div class="section-title">
+                            <h4 class="text-capitalize">New Listings</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row property-filter">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-1.jpg"
+                                >
+                                    <span class="label">For Sale</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$250,000</span>
+
+                                <h5>
+                                    <a href="#">Home in Merrick Way</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >5km away from school</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> 3 Middle
+                                    Winchendon Rd, Rindge, NH 03461
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$1,000,000</span>
+
+                                <h5>
+                                    <a href="#">Unimont Aurum</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >15km away from Mall</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> Gut
+                                    No.102, Opp. HP Petrol Pump, Karjat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$450,000</span>
+
+                                <h5>
+                                    <a href="#">Vrindavan Flora</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >10km away from university</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> No. 15,
+                                    16, 17-1A And 17-2, Rasayani, Rasayani
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="properties.html" class="btn btn-view-all">
+                    View more&nbsp;&nbsp;<span
+                        class="fa fa-long-arrow-right right-icon"
+                    ></span>
+                </a>
+            </div>
+        </section>
+        <!-- End of newest Listings -->
+
+        <!-- Homes around a particular price -->
+        <section class="property-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mt-5">
+                        <div class="section-title">
+                            <h4 class="text-capitalize">
+                                Homes around $1,000,000
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row property-filter">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-1.jpg"
+                                >
+                                    <span class="label">For Sale</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$250,000</span>
+
+                                <h5>
+                                    <a href="#">Home in Merrick Way</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >5km away from school</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> 3 Middle
+                                    Winchendon Rd, Rindge, NH 03461
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$1,000,000</span>
+
+                                <h5>
+                                    <a href="#">Unimont Aurum</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >15km away from Mall</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> Gut
+                                    No.102, Opp. HP Petrol Pump, Karjat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$450,000</span>
+
+                                <h5>
+                                    <a href="#">Vrindavan Flora</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >10km away from university</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> No. 15,
+                                    16, 17-1A And 17-2, Rasayani, Rasayani
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="properties.html" class="btn btn-view-all">
+                    View more&nbsp;&nbsp;<span
+                        class="fa fa-long-arrow-right right-icon"
+                    ></span>
+                </a>
+            </div>
+        </section>
+        <!-- End of homes around a particular price -->
+
+        <!-- Affordable Homes -->
+        <section class="property-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mt-5">
+                        <div class="section-title">
+                            <h4 class="text-capitalize">Affordable Homes</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row property-filter">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-1.jpg"
+                                >
+                                    <span class="label">For Sale</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$250,000</span>
+
+                                <h5>
+                                    <a href="#">Home in Merrick Way</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >5km away from school</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> 3 Middle
+                                    Winchendon Rd, Rindge, NH 03461
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$1,000,000</span>
+
+                                <h5>
+                                    <a href="#">Unimont Aurum</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >15km away from Mall</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> Gut
+                                    No.102, Opp. HP Petrol Pump, Karjat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$450,000</span>
+
+                                <h5>
+                                    <a href="#">Vrindavan Flora</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >10km away from university</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> No. 15,
+                                    16, 17-1A And 17-2, Rasayani, Rasayani
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="properties.html" class="btn btn-view-all">
+                    View more&nbsp;&nbsp;<span
+                        class="fa fa-long-arrow-right right-icon"
+                    ></span>
+                </a>
+            </div>
+        </section>
+        <!-- End of affordable Homes -->
+
+        <!-- Luxury Homes -->
+        <section class="property-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mt-5">
+                        <div class="section-title">
+                            <h4 class="text-capitalize">Luxury Homes</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row property-filter">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-1.jpg"
+                                >
+                                    <span class="label">For Sale</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$250,000</span>
+
+                                <h5>
+                                    <a href="#">Home in Merrick Way</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >5km away from school</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> 3 Middle
+                                    Winchendon Rd, Rindge, NH 03461
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$1,000,000</span>
+
+                                <h5>
+                                    <a href="#">Unimont Aurum</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >15km away from Mall</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> Gut
+                                    No.102, Opp. HP Petrol Pump, Karjat
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="property-item">
+                            <a href="property-details.html">
+                                <div
+                                    class="pi-pic set-bg"
+                                    data-setbg="img/property/property-2.jpg"
+                                >
+                                    <span class="label c-red">Sold Out</span>
+                                </div>
+                            </a>
+
+                            <div class="pi-text">
+                                <a href="javascript:void(0)" class="heart-icon">
+                                    <span class="fa fa-heart-o"></span>
+
+                                    <div class="tip-content">Save</div>
+                                </a>
+
+                                <span class="pt-price">$450,000</span>
+
+                                <h5>
+                                    <a href="#">Vrindavan Flora</a>
+                                </h5>
+
+                                <span style="font-size: 13px"
+                                    >10km away from university</span
+                                >
+
+                                <p>
+                                    <span class="icon_pin_alt"></span> No. 15,
+                                    16, 17-1A And 17-2, Rasayani, Rasayani
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="properties.html" class="btn btn-view-all">
+                    View more&nbsp;&nbsp;<span
+                        class="fa fa-long-arrow-right right-icon"
+                    ></span>
+                </a>
+            </div>
+        </section>
+        <!-- End of Luxury Properties -->
+
+        <!-- Joint Venture -->
+        <section class="jsx-2758934349 hero img-left bg-white">
+            <a href="#">
+                <div class="jsx-2996975403 hero-img">
+                    <img src="img/hero-1.jpg" />
+                </div>
+            </a>
+
+            <div class="jsx-2758934349 wrapper">
+                <header
+                    class="jsx-3406475629 headline-group left align-self-end"
+                >
+                    <h2 class="jsx-3406475629 headline-secondary">
+                        Need a joint Venture? Contact us
+                    </h2>
+
+                    <p class="jsx-3406475629 headline-subhead Mortgage">
+                        We work with you hand in hand with your budget and
+                        resources, from medium to large scale. Contact for JV
+                        reviews and approval.
+                    </p>
+                </header>
+
+                <div class="jsx-2758934349 hero-body align-self-start">
+                    <div id="mortgageHeroContent">
+                        <a href="#" class="btn btn-hmg btn-lg">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Joint Venture -->
+
+        <!-- Local Info -->
+        <section class="jsx-2758934349 hero img-right bg-white mt-5 mt-md-0">
+            <a href="#">
+                <div class="jsx-2996975403 hero-img">
+                    <img src="img/hero-2.jpg" />
+                </div>
+            </a>
+
+            <div class="jsx-2758934349 wrapper">
+                <header
+                    class="jsx-3406475629 headline-group left align-self-end"
+                >
+                    <h2 class="jsx-3406475629 headline-secondary">
+                        Get Local Info
+                    </h2>
+
+                    <p class="jsx-3406475629 headline-subhead Mortgage">
+                        Does it have pet friendly rentals?, What are the crime
+                        rates?, How are the schools?, What are the amenities and
+                        recreation?, How far is the major roads?.
+                    </p>
+                </header>
+
+                <div class="jsx-2758934349 hero-body align-self-start">
+                    <div id="mortgageHeroContent">
+                        <a href="#" class="btn btn-hmg btn-lg">Find Out</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Local Info -->
+
+        <!-- Stats Section -->
+        <div class="container-fluid">
+            <section class="stats">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="text-white text-center">
+                                <span class="stats-num counter">3</span>
+                                <span class="stats-text">Homes for sale</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 mt-4 mt-md-0">
+                            <div class="text-white text-center">
+                                <span class="stats-num counter">3</span>
+                                <span class="stats-text">Open Houses</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 mt-4 mt-md-0">
+                            <div class="text-white text-center">
+                                <span class="stats-num counter">3</span>
+                                <span class="stats-text">Recently Sold</span>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-6 mt-4 mt-md-0">
+                            <div class="text-white text-center">
+                                <span class="stats-num counter">3</span>
+                                <span class="stats-text">Price Reduced</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- End stats Section -->
+
+        <!-- Free Home Insurance Quotes -->
+        <!-- <div class="container-fluid">
+            <section class="free-home-insurance d-none d-md-flex">
+                <p class="display-4 text-left text-white">
+                    Get free home insurance <br />quotes in a flash
+                </p>
+
+                <button class="btn btn-hmg p-3">Get Started</button>
+            </section>
+        </div> -->
+        <!-- End Free Home Insurance Quotes -->
+
+        <div class="container currency-converter">
+            <div class="card currency-wrapper mx-auto">
+                <div class="card-header" style="background-color: #03506f">
+                    <h1 class="text-center text-white">Currency Converter</h1>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="amount" style="font-size: 20px"
+                            >Amount</label
+                        >
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="amount"
+                            oninvalid="this.setCustomValidity('Please enter an amount')"
+                            oninput="this.setCustomValidity('')"
+                        />
+                    </div>
+
+                    <div
+                        class="d-block d-md-flex align-items-center justify-content-between"
+                    >
+                        <div class="form-group">
+                            <label
+                                for="currency-1"
+                                style="font-size: 20px"
+                                class="d-block mb-2"
+                                >From:&nbsp;</label
+                            >
+
+                            <select
+                                class="form-control curr-input"
+                                id="currency-1"
+                            >
+                                <option value="IEP">IEP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                                <option value="KES">KES</option>
+                                <option value="NGN">NGN</option>
+                                <option value="NOK">NOK</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+
+                        <div class="my-4 mb-md-0 mt-md-4">
+                            <i
+                                class="fa fa-exchange"
+                                aria-hidden="true"
+                                style="color: #03506f; font-size: 30px"
+                            ></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label
+                                for="currency-2"
+                                style="font-size: 20px"
+                                class="d-block mb-2"
+                                >To:&nbsp;</label
+                            >
+
+                            <select
+                                class="form-control curr-input"
+                                id="currency-2"
+                            >
+                                <option value="EUR">EUR</option>
+                                <option value="IEP">IEP</option>
+                                <option value="GBP">GBP</option>
+                                <option value="KES">KES</option>
+                                <option value="NGN">NGN</option>
+                                <option value="NOK">NOK</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-hmg btn-block w-100 calculate-btn">
+                        Convert
+                    </button>
+
+                    <p id="result" class="text-center mt-4"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="fs-about">
+                            <div class="fs-logo">
+                                <img
+                                    src="img/logo-white.png"
+                                    class="site-logo"
+                                    alt=""
+                                />
+                            </div>
+
+                            <p>
+                                HMG Homes is a Luxury Real Estate Company. At
+                                HMG Homes, we focus on bringing our esteemed
+                                customers a combination of style and comfort.
+                            </p>
+
+                            <div class="fs-social">
+                                <a href="#" class="footer-link">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+
+                                <a href="#" class="footer-link">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+
+                                <a href="#" class="footer-link">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="fs-widget">
+                            <h5>Links</h5>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="footer-link">Contact</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link"
+                                        >Create Property</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link"
+                                        >My Properties</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link">Register</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-sm-6">
+                        <div class="fs-widget">
+                            <h5>Help</h5>
+
+                            <ul>
+                                <li>
+                                    <a href="#" class="footer-link"
+                                        >Privacy Policy</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link"
+                                        >Contact Support</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link"
+                                        >Knowledgebase</a
+                                    >
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link">Careers</a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="footer-link">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="fs-widget">
+                            <h5>Contact us</h5>
+
+                            <ul>
+                                <li class="footer-item">
+                                    No 6a off road street, by oando filling
+                                    station
+                                </li>
+                                <li class="footer-item">
+                                    Phone no: +2348094562331
+                                </li>
+                                <li class="footer-item">
+                                    Email: hmghomes@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="copyright-text d-block"
+                    >&copy; HMG Homes, All rights reserved.</span
+                >
+            </div>
+        </footer>
+        <!-- // End Footer // -->
+
+        <button id="movetop" title="Go to top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/currency.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".counter").counterUp({
+                    delay: 10,
+                    time: 1000,
+                });
+            });
+        </script>
+    </body>
+</html>
