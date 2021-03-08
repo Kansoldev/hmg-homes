@@ -45,7 +45,7 @@ h6 {
 p {
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.6;
   margin: 0 0 15px 0;
 }
 
@@ -586,6 +586,10 @@ textarea {
     margin: 0 20px;
   }
 }
+.shadow-xxs-1 {
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.07);
+}
+
 .hero-area {
   background-image: url("../img/pexels-david-mcbee-1546166.jpg");
   background-repeat: no-repeat;
@@ -1357,64 +1361,6 @@ input.parsley-error:focus {
   opacity: 0.8;
 }
 
-.slideshow-container {
-  max-width: 1300px;
-  margin: auto;
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  .slideshow-container {
-    padding: 0;
-  }
-}
-
-.mySlides {
-  display: none;
-  align-items: center;
-  flex-wrap: wrap;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@media (min-width: 768px) {
-  .mySlides {
-    flex-wrap: nowrap;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.slide-details {
-  width: 100%;
-  text-align: center;
-  padding: 25px;
-}
-@media (min-width: 768px) {
-  .slide-details {
-    margin-left: 80px;
-  }
-}
-.slide-details h1 {
-  color: #13506f;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-@media (min-width: 768px) {
-  .slide-details h1 {
-    font-size: 2.4rem;
-  }
-}
-.slide-details p {
-  font-size: 1.1rem;
-  color: #13506f;
-}
-
 .free-home-insurance {
   background-image: url(../img/insurance.jpg);
   background-size: cover;
@@ -1538,10 +1484,6 @@ input.parsley-error:focus {
   font-size: 0.825rem;
 }
 
-.shadow-xxs-1 {
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.07);
-}
-
 .btn.focus,
 .btn:focus {
   box-shadow: none;
@@ -1641,7 +1583,6 @@ ul.page-pagination li span.current {
   color: #222;
   font-weight: 700;
 }
-
 @media (max-width: 767px) {
   .headline-secondary {
     color: #fff;
@@ -1649,37 +1590,37 @@ ul.page-pagination li span.current {
     font-size: 30px;
   }
 }
+
 .Mortgage {
   color: #333;
   font-weight: lighter;
   font-size: 19px;
   margin: 24px 0;
 }
-
 @media (max-width: 767px) {
   .Mortgage {
     color: #fff;
   }
 }
+
 .hero-card {
   height: 500px;
   position: relative;
   font-size: 16px;
   margin-top: 60px;
 }
-
 @media (max-width: 767px) {
   .hero-card {
     margin: 20px;
   }
 }
+
 .hero-card .card-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 @media (max-width: 767px) {
   .hero-card .card-content {
     top: 0;
@@ -1695,7 +1636,8 @@ ul.page-pagination li span.current {
     padding: 7px;
     transform: translate(0, 0);
   }
-
+}
+@media (max-width: 767px) {
   .hero-card .card-content::before {
     content: "";
     position: absolute;
@@ -1705,6 +1647,7 @@ ul.page-pagination li span.current {
     z-index: -2;
   }
 }
+
 .hero-img {
   position: absolute;
   top: 0;
@@ -1716,7 +1659,6 @@ ul.page-pagination li span.current {
   animation-duration: 0.5s;
   animation-fill-mode: both;
 }
-
 .hero-img img {
   object-fit: cover;
   object-position: center;
@@ -1724,6 +1666,16 @@ ul.page-pagination li span.current {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .hero-card.img-left .card-content {
+    left: 75%;
+  }
+}
+@media (min-width: 768px) {
+  .hero-card.img-right .card-content {
+    left: 25%;
+  }
+}
 @media (min-width: 768px) {
   .hero-card.img-left .card-content,
 .hero-card.img-right .card-content {
@@ -1737,105 +1689,139 @@ ul.page-pagination li span.current {
     right: 50%;
   }
 }
-@media (min-width: 768px) {
-  .hero-card.img-left .card-content {
-    left: 75%;
-  }
-}
 /* Card with right image */
 @media (min-width: 768px) {
   .hero-card.img-right .hero-img {
     left: 50%;
   }
 }
-@media (min-width: 768px) {
-  .hero-card.img-right .card-content {
-    left: 25%;
-  }
-}
-.banner-area {
-  color: #fff;
-  background-image: url(../img/banner-img.jpg);
-  background-size: cover;
+.get-quote {
+  background-image: url("../img/insurance.jpg");
   background-position: center;
+  padding: 40px;
   position: relative;
   z-index: 1;
-  padding-top: 85px;
 }
-.banner-area::before {
+.get-quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 767px) {
+  .get-quote {
+    padding: 24px;
+  }
+}
+
+.home {
+  position: relative;
+  min-height: 600px;
+}
+.home::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.banner-area .banner-content {
-  max-width: 1260px;
-  padding: 0 20px;
-  margin: auto;
-  height: 480px;
-  line-height: 480px;
+
+.banner-info {
+  position: absolute;
+  top: 120px;
+  padding: 25px;
 }
-@media only screen and (min-width: 1024px) {
-  .banner-area .banner-content {
-    padding: 0 60px;
+@media (min-width: 768px) {
+  .banner-info {
+    top: 200px;
+    padding: 30px 80px;
+    z-index: 99;
   }
 }
-.banner-area .banner-info {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: normal;
+.banner-info :is(h1, p, small) {
+  color: #fff;
 }
-@media only screen and (min-width: 1024px) {
-  .banner-area .banner-info {
-    max-width: 570px;
-  }
-}
-.banner-area .banner-info h1 {
+.banner-info h1 {
   font-size: 32px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  .banner-area .banner-info h1 {
+  .banner-info h1 {
     font-size: 42px;
   }
 }
-.banner-area .banner-info p {
+.banner-info p {
   font-size: 20px;
   line-height: 1.25;
   font-weight: 300;
   margin-bottom: 1.5em;
 }
-.banner-area .banner-info small {
+.banner-info small {
   font-weight: 700;
   margin-bottom: 10px;
   display: block;
 }
+
+.slideshow-container {
+  padding: 20px;
+}
 @media (min-width: 768px) {
-  .banner-area .banner-info small {
-    margin-bottom: 0;
-    display: inline;
+  .slideshow-container {
+    padding: 0;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .banner-area .address-form {
-    margin: 10px 0 20px;
-    width: 700px;
+.mySlides {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@media (min-width: 768px) {
+  .mySlides {
+    flex-wrap: nowrap;
   }
 }
-.address-form button {
-  background-color: #13506f;
-  border-radius: 0;
-  padding: 0.75em;
-  color: #fff;
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.address-form button:hover {
-  color: #fff;
+.slide-details {
+  width: 100%;
+  padding: 25px;
+}
+@media (min-width: 768px) {
+  .slide-details {
+    margin-left: 80px;
+  }
+}
+.slide-details h1 {
+  color: #13506f;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .slide-details h1 {
+    font-size: 2.4rem;
+  }
+}
+.slide-details p {
+  font-size: 1.1rem;
+  color: #13506f;
 }
 
 .mb-30 {

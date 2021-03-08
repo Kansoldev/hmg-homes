@@ -6,9 +6,38 @@
         <title>HMG Homes - My Home</title>
         <link rel="icon" href="img/logo.png" />
         <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/owl.carousel.min.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/slicknav.min.css" />
         <link rel="stylesheet" href="css/style.css" />
+
+        <style>
+            .section-title {
+                color: #13506f;
+                font-size: 40px;
+                font-weight: 900;
+            }
+
+            .custom-direction {
+                position: relative;
+                z-index: 99;
+                border-radius: 7px;
+                position: absolute;
+                right: -50px;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                display: inline-block;
+                background: #13506f;
+            }
+
+            .custom-direction a {
+                padding: 10px 20px;
+                display: inline-block;
+                color: #fff;
+                font-size: 1.5rem;
+            }
+        </style>
     </head>
 
     <body>
@@ -133,85 +162,142 @@
         </header>
         <!-- End Header Area -->
 
-        <section class="banner-area">
-            <div class="banner-content">
-                <div class="banner-info">
-                    <h1 class="text-white">
-                        Check your home’s value and more.
-                    </h1>
+        <section class="hero-section position-relative">
+            <!-- Hero area background slider -->
+            <div class="owl-carousel home-slider">
+                <div class="set-bg home" data-setbg="img/banner-img.jpg"></div>
 
-                    <p>
-                        Make more confident decisions with multiple home value
-                        estimates and view local market trends.
-                    </p>
+                <div class="set-bg home" data-setbg="img/house.jpg"></div>
 
-                    <small>START BY TYPING YOUR ADDRESS</small>
+                <div class="set-bg home" data-setbg="img/HMG-img2.jpg"></div>
+            </div>
 
-                    <form class="address-form form-inline">
-                        <input
-                            type="text"
-                            class="form-control w-75 mb-3 mb-md-0 p-4"
-                            placeholder="Enter your home address"
-                            style="border-radius: 0"
-                        />
+            <div class="banner-info">
+                <h1>Check your home’s value and more.</h1>
 
-                        <button class="btn" type="submit">FIND OUT MORE</button>
-                    </form>
+                <p>
+                    Make more confident decisions with multiple home value
+                    estimates and view local market trends.
+                </p>
+
+                <small>START BY TYPING YOUR ADDRESS</small>
+
+                <form class="address-form form-inline">
+                    <input
+                        type="text"
+                        class="form-control w-75 mb-3 mb-md-0 p-4"
+                        placeholder="Enter your home address"
+                        style="border-radius: 0"
+                    />
+
+                    <button class="btn btn-primary p-3" type="submit">
+                        FIND OUT MORE
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="site-section">
+            <div class="m-4">
+                <div class="row">
+                    <div class="col-lg-6 my-5">
+                        <div class="owl-carousel slide-one-item-alt">
+                            <img
+                                src="img/HMG img3.jpg"
+                                alt="Image"
+                                class="img-fluid"
+                            />
+
+                            <img
+                                src="img/HMG-img2.jpg"
+                                alt="Image"
+                                class="img-fluid"
+                            />
+
+                            <img
+                                src="img/stats.jpg"
+                                alt="Image"
+                                class="img-fluid"
+                            />
+                        </div>
+
+                        <div class="custom-direction">
+                            <a href="#" class="custom-prev">
+                                <span class="fa fa-long-arrow-left"></span>
+                            </a>
+
+                            <a href="#" class="custom-next">
+                                <span class="fa fa-long-arrow-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 ml-auto align-self-center">
+                        <div
+                            class="owl-carousel slide-one-item-alt-text"
+                            style="margin-top: 50px"
+                        >
+                            <div>
+                                <h3 class="section-title mb-3">
+                                    Design Your Dream Home
+                                </h3>
+
+                                <p class="lead">
+                                    HMG Homes in conjunction with HMG DDC is
+                                    ready and equipped to bring your dream
+                                    project to life. From the design stage to
+                                    the contraction stage, we are here to craft
+                                    every step of your taste.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="section-title mb-3">
+                                    Interior & Exterior Designs
+                                </h3>
+
+                                <p class="lead">
+                                    Structural Design & Architecture
+                                </p>
+
+                                <p>HMG MySmartHome</p>
+                            </div>
+
+                            <div>
+                                <h3 class="section-title mb-3">
+                                    Build With Your Budget(BWYB)
+                                </h3>
+
+                                <p class="lead">
+                                    Find affordable lands at strategic and top
+                                    notch locations, while keeping building cost
+                                    at minimal. You will still get the very best
+                                    at HMG. Once again, HMG Homes in conjunction
+                                    with HMG DDC brings you the perfect project.
+                                    Save cost and stress with this program, from
+                                    design to development and construction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="slideshow-container my-5">
-            <div class="mySlides">
-                <div class="w-100">
-                    <img src="img/hero-1.jpg" class="img-fluid" />
-                </div>
+        <section class="m-4 mb-5 get-quote">
+            <p style="font-size: 1.28rem; color: #fff">
+                Introducing a workspace where you get to mould your dream home
+                into a reality. Our in-house craftsmen of well nurtured
+                designers, developers and managers will guide you from designing
+                your home to bringing out the desired structure and finishing
+                while doing this at an effective and efficient budget. At HMG,
+                we are all about detail and decency.
+            </p>
 
-                <div class="slide-details">
-                    <h1>Design Your Dream Home</h1>
-
-                    <p>
-                        HMG Homes in conjunction with HMG DDC is ready and
-                        equipped to bring your dream project to life. From the
-                        design stage to the contraction stage, we are here to
-                        craft every step of your taste.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="w-100">
-                    <img src="img/hero-2.jpg" class="img-fluid" />
-                </div>
-
-                <div class="slide-details">
-                    <h1>Interior & Exterior Designs</h1>
-
-                    <p>Structural Design & Architecture</p>
-
-                    <p>HMG MySmartHome</p>
-                </div>
-            </div>
-
-            <div class="mySlides">
-                <div class="w-100">
-                    <img src="img/house.jpg" class="img-fluid" />
-                </div>
-
-                <div class="slide-details">
-                    <h1>Build With Your Budget(BWYB)</h1>
-
-                    <p>
-                        Find affordable lands at strategic and top notch
-                        locations, while keeping building cost at minimal. You
-                        will still get the very best at HMG. Once again, HMG
-                        Homes in conjunction with HMG DDC brings you the perfect
-                        project. Save cost and stress with this program, from
-                        design to development and construction.
-                    </p>
-                </div>
-            </div>
-        </div>
+            <button class="btn btn-primary p-3 mt-3 px-0 px-md-5">
+                Get A Quote Today!
+            </button>
+        </section>
 
         <!-- Footer -->
         <footer class="footer-section">
@@ -345,31 +431,77 @@
         <!-- // End Footer // -->
 
         <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/mixitup.min.js"></script>
-        <script src="js/jquery.slicknav.js"></script>
         <script src="js/main.js"></script>
         <script>
-            /* Slideshow for MyHome Page */
-            let slideIndex = 0;
+            $(function () {
+                $(".home-slider").owlCarousel({
+                    loop: true,
+                    margin: 0,
+                    items: 1,
+                    dots: true,
+                    smartSpeed: 1200,
+                    autoplay: true,
+                    mouseDrag: false,
+                    touchDrag: false,
+                });
 
-            function showSlides() {
-                let slides = document.getElementsByClassName("mySlides");
+                $(".slide-one-item-alt").owlCarousel({
+                    center: false,
+                    items: 1,
+                    loop: true,
+                    stagePadding: 0,
+                    smartSpeed: 1000,
+                    autoplay: false,
+                    pauseOnHover: true,
+                    onDragged: function (e) {
+                        if (e.relatedTarget["_drag"]["direction"] === "left") {
+                            $(".slide-one-item-alt-text").trigger(
+                                "next.owl.carousel"
+                            );
+                        } else {
+                            $(".slide-one-item-alt-text").trigger(
+                                "prev.owl.carousel"
+                            );
+                        }
+                    },
+                });
 
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
+                $(".slide-one-item-alt-text").owlCarousel({
+                    center: false,
+                    items: 1,
+                    loop: true,
+                    stagePadding: 0,
+                    margin: 0,
+                    smartSpeed: 1000,
+                    autoplay: false,
+                    pauseOnHover: true,
+                    onDragged: function (e) {
+                        if (e.relatedTarget["_drag"]["direction"] === "left") {
+                            $(".slide-one-item-alt").trigger(
+                                "next.owl.carousel"
+                            );
+                        } else {
+                            $(".slide-one-item-alt").trigger(
+                                "prev.owl.carousel"
+                            );
+                        }
+                    },
+                });
 
-                slideIndex++;
+                $(".custom-next").click(function (e) {
+                    e.preventDefault();
+                    $(".slide-one-item-alt").trigger("next.owl.carousel");
+                    $(".slide-one-item-alt-text").trigger("next.owl.carousel");
+                });
 
-                if (slideIndex > slides.length) slideIndex = 1;
-
-                slides[slideIndex - 1].style.display = "flex";
-
-                setTimeout(showSlides, 8200);
-            }
-
-            showSlides();
+                $(".custom-prev").click(function (e) {
+                    e.preventDefault();
+                    $(".slide-one-item-alt").trigger("prev.owl.carousel");
+                    $(".slide-one-item-alt-text").trigger("prev.owl.carousel");
+                });
+            });
         </script>
     </body>
 </html>
