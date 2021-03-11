@@ -11,20 +11,27 @@ const btn = document.querySelector(".calculate-btn");
 let baseCurrencyInput = document.querySelector("#currency-1");
 let secondCurrencyInput = document.querySelector("#currency-2");
 let amountInput = document.querySelector("#amount");
-let toShowResult = document.querySelector("#result");
+let result = document.querySelector("#result");
 let isValid = true;
 
 document.querySelector("#currencyForm").addEventListener("submit", (e) => {
     e.preventDefault();
+    let amount = amountInput.value;
     const baseCurrencyValue = document.querySelector("#currency-1").value;
     const secondCurrencyValue = document.querySelector("#currency-2").value;
-    let amount = amountInput.value;
 
     if (amount === "") {
-        showError(amountInput, "Please enter an amount");
-        toShowResult.textContent = "";
+        isValid = false;
+        const formGroup = amountInput.parentElement;
+        formGroup.querySelector("small").innerHTML = "Please enter an amount";
+        formGroup.querySelector(".form-control").classList.add("error-border");
     } else {
-        showSuccess(amountInput);
+        isValid = true;
+        const formGroup = amountInput.parentElement;
+        formGroup.querySelector("small").innerHTML = "";
+        formGroup
+            .querySelector(".form-control")
+            .classList.remove("error-border");
     }
 
     if (isValid) {
@@ -41,27 +48,12 @@ document.querySelector("#currencyForm").addEventListener("submit", (e) => {
         )
             .then((res) => res.json())
             .then((data) => {
-                toShowResult.textContent = `${amount} ${baseCurrencyValue} = ${
+                result.textContent = `${amount} ${baseCurrencyValue} = ${
                     data.rates[`${secondCurrencyValue}`].rate_for_amount
                 } ${secondCurrencyValue}`;
             })
             .catch((err) => {
-                // console.log(`Couldn't convert currency -> ${err}`);
-                toShowResult.textContent = "An Error occured while converting";
+                result.textContent = "An Error occured while converting";
             });
     }
 });
-
-function showError(field, message) {
-    isValid = false;
-    const formGroup = field.parentElement;
-    formGroup.querySelector("small").innerHTML = message;
-    formGroup.querySelector(".form-control").classList.add("error-border");
-}
-
-function showSuccess(field) {
-    isValid = true;
-    const formGroup = field.parentElement;
-    formGroup.querySelector("small").innerHTML = "";
-    formGroup.querySelector(".form-control").classList.remove("error-border");
-}

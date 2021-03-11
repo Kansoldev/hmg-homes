@@ -1,0 +1,32 @@
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    color: #212529;
+    min-height: 38px;
+    display: initial;
+}
+
+form label {
+    font-weight: 400;
+}
+
+textarea.form-control {
+    height: 250px;
+    resize: none;
+}
+
+.custom-select {
+    display: inline-block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    background: url(../img/custom-select.png) right 0.75rem center no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}

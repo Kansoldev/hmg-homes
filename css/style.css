@@ -349,22 +349,6 @@ textarea {
   }
 }
 
-.btn-view-all {
-  background-color: #13506f;
-  color: #fff;
-  padding: 10px 35px;
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: 600;
-  transition: 0.3s ease-in;
-}
-.btn-view-all:hover {
-  background-color: #fff;
-  color: #13506f;
-  box-shadow: 0 10px 10px -5px rgba(51, 51, 51, 0.05);
-  transform: translateY(-5px);
-}
-
 .footer-section {
   background: #13506f;
   padding-top: 70px;
@@ -454,6 +438,24 @@ textarea {
   border-color: transparent;
   box-shadow: none;
   color: #fff;
+}
+
+.btn-outline-primary {
+  color: #13506f;
+  border-color: #13506f;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #13506f;
+  border-color: #13506f;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #13506f;
+  border-color: #13506f;
 }
 
 /* MARGINS */
@@ -1698,7 +1700,7 @@ ul.page-pagination li span.current {
 .get-quote {
   background-image: url("../img/insurance.jpg");
   background-position: center;
-  padding: 40px;
+  padding: 24px;
   position: relative;
   z-index: 1;
 }
@@ -1712,9 +1714,9 @@ ul.page-pagination li span.current {
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.65);
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .get-quote {
-    padding: 24px;
+    padding: 45px;
   }
 }
 
