@@ -14,16 +14,61 @@
         <link href="assets/css/themify-icons.css" rel="stylesheet" />
         <!-- Bootstrap CSS -->
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
-        <!-- Bootstrap Touchspin CSS -->
-        <link
-            href="assets/css/jquery.bootstrap-touchspin.min.css"
-            rel="stylesheet"
-        />
         <!-- Custom CSS -->
         <link href="assets/css/main.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
         <link href="assets/css/utilities.css" rel="stylesheet" />
         <link href="assets/css/add-property.css" rel="stylesheet" />
+
+        <style>
+            .features-list {
+                overflow: hidden;
+                margin-top: 30px;
+            }
+
+            .features-list .feature-item {
+                width: 25%;
+                float: left;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .features-list .feature-item {
+                    width: 100%;
+                    float: none;
+                }
+            }
+
+            .features-list .feature-item label {
+                font-size: 14px;
+                color: #777;
+                font-weight: 500;
+                position: relative;
+                padding-left: 26px;
+                cursor: pointer;
+                display: block;
+                margin-bottom: 20px;
+            }
+
+            .features-list .feature-item label input {
+                position: absolute;
+                visibility: hidden;
+            }
+
+            .features-list .feature-item label input:checked ~ span {
+                background-color: #13506f;
+            }
+
+            .features-list .feature-item label .checkbox {
+                position: absolute;
+                left: 0;
+                top: 4px;
+                width: 14px;
+                height: 14px;
+                border: 1px solid #13506f;
+                border-radius: 2px;
+                content: "";
+            }
+        </style>
     </head>
 
     <body class="skin-blue fixed-layout">
@@ -368,7 +413,7 @@
                                     <form class="pro-add-form">
                                         <div class="form-group">
                                             <label for="input-file-now"
-                                                >Upload Property Image</label
+                                                >Property Image</label
                                             ><br />
 
                                             <input
@@ -404,7 +449,7 @@
 
                                         <div class="form-group">
                                             <label class="control-label"
-                                                >Property For</label
+                                                >Property Status</label
                                             >
 
                                             <div class="col-md-9">
@@ -462,12 +507,11 @@
                                                 >Property Address</label
                                             >
 
-                                            <input
-                                                type="number"
+                                            <textarea
                                                 class="form-control"
-                                                id="plocation"
-                                                placeholder="Enter Property Address"
-                                            />
+                                                rows="3"
+                                                id="paddress"
+                                            ></textarea>
                                         </div>
 
                                         <div class="form-group">
@@ -484,49 +528,37 @@
 
                                         <div class="form-group">
                                             <div class="row">
-                                                <div class="col-sm-4">
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
                                                     <label for="psqft"
-                                                        >Square Ft</label
+                                                        >Square Feet</label
                                                     >
+
                                                     <input
                                                         type="text"
                                                         class="form-control"
                                                         id="psqft"
                                                     />
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <label for="pyear"
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
+                                                    <label for="year"
                                                         >Year Built</label
                                                     >
 
-                                                    <select
-                                                        class="form-control custom-select"
-                                                        id="pyear"
-                                                    >
-                                                        <option
-                                                            value="0"
-                                                            disabled
-                                                            selected
-                                                        >
-                                                            Year
-                                                        </option>
-
-                                                        <option value="1">
-                                                            2015
-                                                        </option>
-
-                                                        <option value="2">
-                                                            2017
-                                                        </option>
-                                                    </select>
+                                                    <input
+                                                        type="number"
+                                                        class="form-control"
+                                                        id="year"
+                                                    />
                                                 </div>
 
-                                                <div class="col-sm-4">
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
                                                     <label for="status"
                                                         >Status</label
                                                     >
@@ -557,9 +589,11 @@
 
                                         <div class="form-group">
                                             <div class="row">
-                                                <div class="col-sm-4">
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
                                                     <label for="type"
-                                                        >Type</label
+                                                        >Property Type</label
                                                     >
 
                                                     <select
@@ -584,13 +618,15 @@
                                                             House
                                                         </option>
 
-                                                        <option value="villa">
-                                                            Villa
+                                                        <option value="land">
+                                                            Land
                                                         </option>
                                                     </select>
                                                 </div>
 
-                                                <div class="col-sm-4">
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
                                                     <label for="subdiv"
                                                         >Country</label
                                                     >
@@ -617,7 +653,9 @@
                                                     </select>
                                                 </div>
 
-                                                <div class="col-sm-4">
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
                                                     <label for="city"
                                                         >State</label
                                                     >
@@ -648,7 +686,7 @@
 
                                         <!-- Apartments -->
                                         <div
-                                            class="form-group prop"
+                                            class="form-group prop d-none"
                                             id="apartment"
                                         >
                                             <div class="row">
@@ -700,8 +738,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- End Apartments -->
 
-                                        <!-- Houses -->
+                                        <!-- House -->
                                         <div
                                             class="form-group prop d-none"
                                             id="house"
@@ -716,6 +755,7 @@
                                                         <input
                                                             type="number"
                                                             class="form-control"
+                                                            id="plocation"
                                                             placeholder="No of rooms"
                                                         />
                                                     </div>
@@ -731,6 +771,7 @@
                                                         <input
                                                             type="number"
                                                             class="form-control"
+                                                            id="bedrooms"
                                                             placeholder="No of bedrooms"
                                                         />
                                                     </div>
@@ -746,39 +787,332 @@
                                                         <input
                                                             type="number"
                                                             class="form-control"
+                                                            id="plocation"
                                                             placeholder="No of bathrooms"
                                                         />
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-4"></div>
+                                                <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <label>Store</label>
-
-                                                        <select
-                                                            class="form-control custom-select"
-                                                            name="store"
+                                                        <label
+                                                            >No of parking
+                                                            spaces</label
                                                         >
-                                                            <option
-                                                                value="1"
-                                                                selected
-                                                            >
-                                                                Yes
-                                                            </option>
 
-                                                            <option value="0">
-                                                                No
-                                                            </option>
-                                                        </select>
+                                                        <input
+                                                            type="number"
+                                                            class="form-control"
+                                                            id="plocation"
+                                                            placeholder="No of parking spaces"
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- End House -->
 
-                                        
+                                        <!-- Land -->
+                                        <div
+                                            class="form-group prop d-none"
+                                            id="land"
+                                        >
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Acres</label>
+
+                                                        <input
+                                                            type="number"
+                                                            class="form-control"
+                                                            id="plocation"
+                                                            placeholder="Number of acres"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label>Lot size</label>
+
+                                                        <input
+                                                            type="number"
+                                                            class="form-control"
+                                                            id="bedrooms"
+                                                            placeholder="Lot size"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label
+                                                            >Total area</label
+                                                        >
+
+                                                        <input
+                                                            type="number"
+                                                            class="form-control"
+                                                            id="plocation"
+                                                            placeholder="Total area"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label
+                                                            >Square
+                                                            meters</label
+                                                        >
+
+                                                        <input
+                                                            type="number"
+                                                            class="form-control"
+                                                            id="plocation"
+                                                            placeholder="Square meters"
+                                                        />
+                                                    </div>
+                                                </div>
+
+                                                <div
+                                                    class="col-sm-4 form-group"
+                                                >
+                                                    <label for="city"
+                                                        >Condition</label
+                                                    >
+
+                                                    <select
+                                                        class="form-control custom-select"
+                                                        id="city"
+                                                    >
+                                                        <option value="1">
+                                                            Dry
+                                                        </option>
+
+                                                        <option value="2">
+                                                            Waterlogged
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Land -->
+
+                                        <hr />
+
+                                        <h3
+                                            class="text-center my-4 text-uppercase"
+                                            style="color: #13506f"
+                                        >
+                                            Property Amenities
+                                        </h3>
+
+                                        <!-- AMENITIES -->
+                                        <div class="features-list">
+                                            <div class="feature-item">
+                                                <label for="air"
+                                                    >Air conditioning
+                                                    <input
+                                                        type="checkbox"
+                                                        id="air"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="lundry"
+                                                    >Laundry
+                                                    <input
+                                                        type="checkbox"
+                                                        id="lundry"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="refrigerator"
+                                                    >Refrigerator
+                                                    <input
+                                                        type="checkbox"
+                                                        id="refrigerator"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="washer"
+                                                    >Washer
+                                                    <input
+                                                        type="checkbox"
+                                                        id="washer"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="feature-item">
+                                                <label for="parking"
+                                                    >Parking lot
+                                                    <input
+                                                        type="checkbox"
+                                                        id="parking"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="lawn"
+                                                    >Lawn
+                                                    <input
+                                                        type="checkbox"
+                                                        id="lawn"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="sauna"
+                                                    >Sauna
+                                                    <input
+                                                        type="checkbox"
+                                                        id="sauna"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="wifi"
+                                                    >Wifi
+                                                    <input
+                                                        type="checkbox"
+                                                        id="wifi"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="feature-item">
+                                                <label for="dryer"
+                                                    >Dryer
+                                                    <input
+                                                        type="checkbox"
+                                                        id="dryer"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="microwave"
+                                                    >Microwave
+                                                    <input
+                                                        type="checkbox"
+                                                        id="microwave"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="pool"
+                                                    >Swimming pool
+                                                    <input
+                                                        type="checkbox"
+                                                        id="pool"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="window"
+                                                    >Window Coverings
+                                                    <input
+                                                        type="checkbox"
+                                                        id="window"
+                                                    />
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="feature-item">
+                                                <label for="gym"
+                                                    >Gym
+                                                    <input
+                                                        type="checkbox"
+                                                        id="gym"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="shower"
+                                                    >OutdoorShower
+                                                    <input
+                                                        type="checkbox"
+                                                        id="shower"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="tv"
+                                                    >Tv Cable
+                                                    <input
+                                                        type="checkbox"
+                                                        id="tv"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+
+                                                <label for="villa"
+                                                    >Villa
+                                                    <input
+                                                        type="checkbox"
+                                                        id="villa"
+                                                    />
+
+                                                    <span
+                                                        class="checkbox"
+                                                    ></span>
+                                                </label>
+                                            </div>
+                                        </div>
+
                                         <button
                                             type="submit"
-                                            class="btn btn-primary p-2 w-25 m-auto waves-effect waves-light"
+                                            class="btn btn-primary btn-lg w-auto w-md-25 p-2 px-md-3 waves-effect waves-light"
                                         >
                                             Add Property
                                         </button>
@@ -801,7 +1135,6 @@
         <script src="assets/js/bootstrap.bundle.js"></script>
         <script src="assets/js/perfect-scrollbar.jquery.min.js"></script>
         <script src="assets/js/waves.js"></script>
-        <script src="assets/js/jquery.bootstrap-touchspin.js"></script>
         <script src="assets/js/custom.min.js"></script>
         <script>
             const removeClass = (id) =>
@@ -824,6 +1157,11 @@
                     case "apartment":
                         removeClass("#apartment");
                         addClass("#apartment");
+                        break;
+
+                    case "land":
+                        removeClass("#land");
+                        addClass("#land");
                         break;
 
                     case "house":

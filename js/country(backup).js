@@ -1,27 +1,77 @@
 /* ====== STATES ====== */
 const ireland = ["Dublin", "Belfast", "Cork", "Derry", "Limerick"];
 
-const nigeria = ["Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti","Enugu", "Gombe", "Imo", "Jigawa", "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger", "Ogun", "Ondo", "Osun", "Oyo", "plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara", "FCT(Abuja)"];
+const nigeria = [
+    "Abia",
+    "Adamawa",
+    "Akwa Ibom",
+    "Anambra",
+    "Bauchi",
+    "Bayelsa",
+    "Benue",
+    "Borno",
+    "Cross River",
+    "Delta",
+    "Ebonyi",
+    "Edo",
+    "Ekiti",
+    "Enugu",
+    "Gombe",
+    "Imo",
+    "Jigawa",
+    "Kaduna",
+    "Kano",
+    "Katsina",
+    "Kebbi",
+    "Kogi",
+    "Kwara",
+    "Lagos",
+    "Nasarawa",
+    "Niger",
+    "Ogun",
+    "Ondo",
+    "Osun",
+    "Oyo",
+    "plateau",
+    "Rivers",
+    "Sokoto",
+    "Taraba",
+    "Yobe",
+    "Zamfara",
+    "FCT(Abuja)",
+];
 
 const uk = ["London", "Manchester", "Birmingham", "Glasgow", "Liverpool"];
 
-const usa = ["Washington", "Maryland", "California", "Massachusetts", "Colorado"];
+const usa = [
+    "Washington",
+    "Maryland",
+    "California",
+    "Massachusetts",
+    "Colorado",
+];
 
 const norway = ["Oslo", "Stavanger", "Tromso", "Berjen", "Geirangerfjord"];
 
-const sa = ["Cape Town", "Johannesburg", "Durban", "Pretoria", "Port Elizabeth"];
+const sa = [
+    "Cape Town",
+    "Johannesburg",
+    "Durban",
+    "Pretoria",
+    "Port Elizabeth",
+];
 
 const kenya = ["Nairobi", "Mombasa", "Kisumu", "Nakuru", "Eldoret"];
 /* ====== END OF STATES ====== */
 
-document.querySelector("#country").addEventListener("change", function() {
+document.querySelector("#country").addEventListener("change", function () {
     switchName();
-})
+});
 
 function switchName() {
     const country = document.querySelector("#country").value;
 
-    switch(country) {
+    switch (country) {
         case "ireland":
             getCountry(ireland);
             break;
@@ -45,7 +95,7 @@ function switchName() {
             break;
         default:
             document.querySelector("#location").innerHTML = "";
-            
+
             // create option tag
             const option = document.createElement("option");
 
@@ -61,8 +111,8 @@ function switchName() {
 
 function getCountry(name) {
     document.querySelector("#location").innerHTML = "";
-    
-    name.map(state => {
+
+    name.map((state) => {
         // create option tag
         const option = document.createElement("option");
 
@@ -73,7 +123,7 @@ function getCountry(name) {
         option.appendChild(document.createTextNode(state));
 
         return option;
-    }).forEach(state => {
+    }).forEach((state) => {
         document.querySelector("#location").appendChild(state);
-    })
+    });
 }

@@ -8,52 +8,38 @@
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/owl.carousel.min.css" />
         <link rel="stylesheet" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" href="css/style.css" />
-
-        <style>
-            .section-title {
-                color: #13506f;
-                font-size: 40px;
-                font-weight: 900;
-            }
-
-            .custom-direction {
-                position: relative;
-                z-index: 99;
-                border-radius: 7px;
-                position: absolute;
-                right: -50px;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-                display: inline-block;
-                background: #13506f;
-            }
-
-            .custom-direction a {
-                padding: 10px 20px;
-                display: inline-block;
-                color: #fff;
-                font-size: 1.5rem;
-            }
-        </style>
+        <link rel="stylesheet" href="css/main.css" />
     </head>
 
     <body>
+        <!-- Preloader Start -->
+        <div id="preloader-active">
+            <div
+                class="preloader d-flex align-items-center justify-content-center"
+            >
+                <div class="preloader-inner position-relative">
+                    <div class="preloader-circle"></div>
+                    <div class="preloader-img pere-text">
+                        <img src="img/logo.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Preloader Start -->
+
         <!-- Header Area -->
         <header id="site-header" class="fixed-top">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg stroke px-0">
-                    <a class="navbar-brand" href="index.html">
+                    <a href="index.html">
                         <img
                             src="img/logo-white.png"
                             class="site-logo"
-                            alt=""
+                            alt="logo"
                         />
                     </a>
 
-                    <div class="header-relative order-md-3 d-block d-md-none">
+                    <div class="header-relative order-lg-3 d-block d-lg-none">
                         <div class="user-menu">
                             <div class="user-name">
                                 <span>
@@ -112,18 +98,11 @@
                                     <div class="dropdown-content-item">
                                         <h4>Homes for Sale</h4>
 
-                                        <a href="#">Homes for Sale</a>
+                                        <a href="homesforsale.html"
+                                            >Homes for Sale</a
+                                        >
                                         <a href="#">New Home Construction</a>
                                         <a href="#">Work with your budget</a>
-                                    </div>
-
-                                    <div class="dropdown-content-item">
-                                        <h4>Homes Values</h4>
-
-                                        <a href="#">Housing Market</a>
-                                        <a href="#">Property Records</a>
-                                        <a href="#">Home Buying Tips</a>
-                                        <a href="#">Home Selling Tips</a>
                                     </div>
                                 </div>
                             </div>
@@ -143,16 +122,18 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="home.html">My Home</a>
+                                <a class="nav-link" href="myhome.html"
+                                    >My Home</a
+                                >
                             </li>
                         </ul>
 
-                        <div class="mt-3 mt-md-0 d-none d-md-block">
-                            <a href="login.html" class="btn btn-login">
+                        <div class="mt-3 mt-md-0 d-none d-lg-flex">
+                            <a href="login.html" class="btn" id="login">
                                 Login
                             </a>
 
-                            <a href="signup.html" class="btn btn-signup">
+                            <a href="signup.html" class="btn" id="signup">
                                 Signup
                             </a>
                         </div>
@@ -200,7 +181,7 @@
         <section class="site-section">
             <div class="m-4">
                 <div class="row">
-                    <div class="col-lg-6 my-5">
+                    <div class="col-lg-6 my-md-5">
                         <div class="owl-carousel slide-one-item-alt">
                             <img
                                 src="img/HMG img3.jpg"
@@ -232,13 +213,13 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-5 ml-auto align-self-center">
+                    <div class="col-lg-5 align-self-center ml-md-5">
                         <div
                             class="owl-carousel slide-one-item-alt-text"
                             style="margin-top: 50px"
                         >
                             <div>
-                                <h3 class="section-title mb-3">
+                                <h3 class="my-3 text-primary font-weight-bold">
                                     Design Your Dream Home
                                 </h3>
 
@@ -252,9 +233,9 @@
                             </div>
 
                             <div>
-                                <h3 class="section-title mb-3">
+                                <h1 class="my-3 text-primary font-weight-bold">
                                     Interior & Exterior Designs
-                                </h3>
+                                </h1>
 
                                 <p class="lead">
                                     Structural Design & Architecture
@@ -264,9 +245,9 @@
                             </div>
 
                             <div>
-                                <h3 class="section-title mb-3">
+                                <h1 class="my-3 text-primary font-weight-bold">
                                     Build With Your Budget(BWYB)
-                                </h3>
+                                </h1>
 
                                 <p class="lead">
                                     Find affordable lands at strategic and top
@@ -284,20 +265,46 @@
             </div>
         </section>
 
-        <section class="m-4 mb-5 get-quote">
-            <p style="font-size: 1.28rem; color: #fff; line-height: 1.7">
-                Introducing a workspace where you get to mould your dream home
-                into a reality. Our in-house craftsmen of well nurtured
-                designers, developers and managers will guide you from designing
-                your home to bringing out the desired structure and finishing
-                while doing this at an effective and efficient budget. At HMG,
-                we are all about detail and decency.
-            </p>
+        <div class="have-project">
+            <div class="m-4">
+                <div class="haveAproject">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-7 col-lg-9 col-md-12">
+                            <div class="wantToWork-caption">
+                                <h2 class="text-white">Need a property?</h2>
 
-            <button class="btn btn-primary p-3 mt-3 px-0 px-md-5">
-                Get A Quote Today!
-            </button>
-        </section>
+                                <p class="text-white" style="line-height: 1.8">
+                                    Introducing a workspace where you get to
+                                    mould your dream home into a reality. Our
+                                    in-house craftsmen of well nurtured
+                                    designers, developers and managers will
+                                    guide you from designing your home to
+                                    bringing out the desired structure and
+                                    finishing while doing this at an effective
+                                    and efficient budget. At HMG, we are all
+                                    about detail and decency.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-5 col-lg-3 col-md-12">
+                            <div class="wantToWork-btn float-md-right">
+                                <a
+                                    href="#"
+                                    class="btn btn-primary"
+                                    style="
+                                        padding: 30px 40px;
+                                        min-width: 200px;
+                                        line-height: 0;
+                                    "
+                                    >Get A Quote Today!</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer-section">
@@ -451,6 +458,7 @@
                     center: false,
                     items: 1,
                     loop: true,
+                    margin: 0,
                     stagePadding: 0,
                     smartSpeed: 1000,
                     autoplay: false,
@@ -469,7 +477,6 @@
                 });
 
                 $(".slide-one-item-alt-text").owlCarousel({
-                    center: false,
                     items: 1,
                     loop: true,
                     stagePadding: 0,
